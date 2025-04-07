@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pods for Chrome</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+  <header id="header">
+    <nav class="navbar">
+      <div class="navbar__logo"><h2 class="accent" style="font-weight: bold;">Pods for Chrome</h2></div>
+      <button class="menu-toggle" aria-label="Open menu">&#9776;</button>
+      <ul class="navbar__links">
+        <li><a href="#header">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#">Testimonials</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#waiting-list">Waiting List</a></li>
+      </ul>
+    </nav>
+
+    <div id="highlights" class="highlights">
+      <h1>The modern <span class="accent">multi-login</span> extension for your browser</h1>
+      <p>No more private windows or account switching!</p>
+      <button id="button-scroll" class="button-accent">Join Waiting List</button>
+    </div>
+  </header>
+
+  <section id='features' class='features-section'>
+    <h3 class='section-title'>Why You'll Love Pods</h3>
+    <div class='features-toggle'>
+      <ul class='features-menu'>
+        <li data-feature='login' class='active'>Seamless Multi-Login</li>
+        <li data-feature='ui'>Intuitive Interface</li>
+        <li data-feature='platform'>Chromium Freedom</li>
+      </ul>
+      <div class='features-display'>
+        <div class='feature-img'>
+          <img src='./images/feature_01.png' data-feature='login'>
+          <img src='./images/feature_02.png' data-feature='ui' style='display: none'>
+          <img src='./images/feature_03.png' data-feature='platform' style='display: none'>
+        </div>
+        <div class='feature-text'>
+          <div data-feature='login'>Instantly switch between accounts without opening new windows or private tabs. Pure efficiency.</div>
+          <div data-feature='ui' style='display: none'>A clean, minimal interface built for productivity. No configs. No confusion. Just click and go.</div>
+          <div data-feature='platform' style='display: none'>Works anywhere Chromium goes. Chrome, Edge, Brave—you name it. No vendor lock-in, ever.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="waiting-list" class="waiting-list">
+    <h3>Join our waiting list!</h3>
+    <form id="waiting-list__form">
+      <label for="email">Enter your best email <span class="accent">*</span></label>
+      <div class="form-inline">
+        <input id="email" name="email" type="email" placeholder="Your best email!" required>
+        <button id="submit-btn" class="button-accent" type="submit">Join!</button>
+      </div>
+    </form>
+    <p id="form-status"></p>
+    <div id="modal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <span id="modal-message">
+          <p>Thanks for subscribing!</p>
+          <p>Please join our Discord community if you aren't already!</p>
+          <a href="https://discord.gg/8eufDycQdm" target="_blank">https://discord.gg/8eufDycQdm</a>
+        </span>
+        <button id="modal-ok" class="button-accent">OK</button>
+      </div>
+    </div>
+  </section>
+  <section id="faq" class="faq">
+    <h3>Frequently Asked Questions</h3>
+    <div class="faq-item">
+      <button class="faq-question">What is Pods for Chrome?</button>
+      <div class="faq-answer">
+        <p>Pods for Chrome is a modern <b>multi-login extension for your browser</b>. It allows you to manage multiple accounts seamlessly. It also has effortless integration with reverse proxies.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">What is the mission of Pods for Chrome?</button>
+      <div class="faq-answer">
+        <p>Pods for Chrome was created in response to the high demand from users for a <b>fast and efficient multi-session solution for Chromium-based browsers</b>. Unlike existing solutions, our graphical interface is not so complicated that you almost need a course to learn how to use it.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Is Pods for Chrome free to use?</button>
+      <div class="faq-answer">
+        <p>Yes, for now the extension is <b>absolutely free</b> to use with premium features coming soon - If all goes well, before the middle of the third quarter of 2025.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">What information does this site collect?</button>
+      <div class="faq-answer">
+        <p><b>We do not collect any personal information at first</b>, but the user can voluntarily subscribe to receive information and news about us via email. That's it!</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">What type of data does the extension store?</button>
+      <div class="faq-answer">
+        <p>
+          Currently the extension <b>does not collect any user information</b>. The permissions are explicitly described in the Chrome WebStore and are used exclusively for operation, that is, <b>all user interaction information is stored locally in your browser, and never leaves your machine.</b>
+        </p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; <span id="year"></span> - <a href="#header" style="font-weight: bold;">Pods for Chrome</a</p>
+  </footer>
+  <script src="./script.js"></script>
+</body>
+</html>
